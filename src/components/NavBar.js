@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
-export class NavBar extends Component {
+const NavBar=()=> {
 
-  render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+        <nav className="navbar fixed-top navbar-expand-lg bg-dark navbar-dark">
           <div className="container-fluid">
             <Link className="navbar-brand"  to="/">NewsMonkey</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,9 +15,6 @@ export class NavBar extends Component {
                 <li className="nav-item">
                   <Link className="nav-link" aria-current="page"  to="/">Home</Link>
                 </li>
-                {/* <li className="nav-item">
-                  <Link className="nav-link"href="/about">About</Link>
-                </li> */}
                 <li className="nav-item">
                   <Link className="nav-link" to="/business">Business</Link>
                 </li>
@@ -47,6 +43,5 @@ export class NavBar extends Component {
       </div>
     )
   }
-}
 
 export default NavBar
